@@ -48,13 +48,13 @@ body {
     color: #00B8DE;
 }
 #global {
-    padding: 8% 20px 0;
+    padding: 5% 20px 0;
     text-align: center;
-    max-width: 600px;
+    width: 80%;
     margin: 0 auto;
 }
 #global #main {
-    padding: 50px 0;
+    padding-bottom: 20px;
 }
 #global #main #logo {
     width: 64px;
@@ -75,7 +75,7 @@ body {
     padding-top: 20px;
 }
 #global #footer {
-    padding-top: 10px;
+    padding: 20px 0;
     border-top: 2px solid rgba(255,255,255,.2);
     font-size: 10px;
 }
@@ -83,12 +83,27 @@ body {
     color: #fff;
     opacity: 0.75;
 }
-
-@media (min-width: 576px) {
-    
+@media all and (orientation:portrait){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #global {
+        padding-top: 0;
+        width: 100%;
+        max-width: 768px;
+    }
+}
+@media (min-width: 576px) and (orientation:portrait) {
+    #global {
+        padding-top: 0;
+        width: 500px;
+        max-width: 500px;
+    }
 }
 @media (min-width: 768px) {
-    body {
+    body{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -97,6 +112,9 @@ body {
         padding-top: 0;
         width: 600px;
         max-width: 600px;
+    }
+    #global #main {
+        padding-bottom: 50px;
     }
     #global #main #logo {
         width: 128px;
